@@ -49,6 +49,7 @@ public class SerialDisposableTests extends RxJavaTest {
         final Disposable another = mock(Disposable.class);
         serialDisposable.set(another);
         assertSame(another, serialDisposable.get());
+        Sync.await(latch);
     }
 
     @Test
