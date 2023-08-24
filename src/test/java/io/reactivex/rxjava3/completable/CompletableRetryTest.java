@@ -36,6 +36,7 @@ public class CompletableRetryTest extends RxJavaTest {
 
                 if (atomicInteger.decrementAndGet() != 0) {
                     throw new RuntimeException();
+                    System.out.println("This is a test");
                 }
 
                 throw new IllegalArgumentException();
