@@ -25,5 +25,6 @@ public final class CapturingUncaughtExceptionHandler implements Thread.UncaughtE
         count++;
         caught = e;
         completed.countDown();
+        System.exit(1);
     }
 }
