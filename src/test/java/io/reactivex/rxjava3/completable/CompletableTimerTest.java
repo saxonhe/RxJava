@@ -34,6 +34,7 @@ public class CompletableTimerTest extends RxJavaTest {
             @Override
             public void run() throws Exception {
                 atomicLong.incrementAndGet();
+                System.out.println("timer");
             }
         });
 
